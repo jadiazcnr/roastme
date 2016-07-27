@@ -36,7 +36,8 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  'get /me': 'UserController.index'
+  'get /user': 'UserController.index',
+  'get /user/detail/:id': 'UserController.detail'
 
   /***************************************************************************
   *                                                                          *
