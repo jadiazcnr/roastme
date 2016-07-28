@@ -1,0 +1,21 @@
+<div class="container">
+	<h3>User Administration</h3>
+  <form action="/user/create" method="POST" class="form-signin">
+    <h2 class="form-signin-heading"> Crear Usuario
+    <div class="control-group">
+      <input type="text" class="form-control" placeholder="Nombre" name="name">
+    </div>
+    <div class="control-group">
+      <input type="text" class="form-control" placeholder="Nombre de usuario" name="username">
+    </div>
+    <div class="control-group">
+      <input type="text" class="form-control" placeholder="Email" name="email">
+    </div>
+    <div class="control-group">
+      <input type="password" class="form-control" placeholder="Contraseña" name="password">
+    </div>
+    <br/>
+    <input type="submit" class="btn btn-lg btn-primary btn-block" value="Create User"/>
+    <input type="hidden" name="_csrf" value="<%=_csrf %>"/>
+  </form>
+</div>

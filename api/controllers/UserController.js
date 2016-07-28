@@ -34,6 +34,16 @@ module.exports = {
 				user: user
 			});
 		});
+	},
+
+	create: function(req, res) {
+		User.create(req.params.all(), function userCreated(err, user) {
+			if (err) {
+				return res.negotiate(err);
+				return res.redirect('/user/new');
+			}
+			res.redirect('/user/index');
+		});
 	}
 
 };
