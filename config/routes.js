@@ -42,8 +42,10 @@ module.exports.routes = {
   },
   'get /user': 'UserController.index',
   'get /user/detail/:id': 'UserController.detail',
-  'post /user/create': 'UserController.create'
+  'post /user/create': 'UserController.create',
 
+  /* Roast routes */
+  'get /roast/detail/:userId': 'RoastController.index',
   /***************************************************************************
    *                                                                          *
    * Custom routes here...                                                    *

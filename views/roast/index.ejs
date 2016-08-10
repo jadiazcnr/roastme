@@ -1,0 +1,27 @@
+<div class="container">
+	<h3>User Administration</h3>
+	<table class='table'>
+		<tr>
+			<th></th>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Username</th>
+			<th>Email</th>
+			<th></th>
+			<th></th>
+			<th></th>
+		</tr>
+
+
+		<% _.each(roasts, function(roast) { %>
+		<tr data-id="<%= roast.id %>" data-model="roast">
+			<td><%= roast.id %></td>
+			<td><%= roast.title %></td>
+			<td><%= roast.creationDate %></td>
+			<td><%= roast.imageUrl %></td>
+		</tr>
+		<% }) %>
+	</table>
+
+  <a href="/user/new" class="btn btn-sm btn-warning">Create</a>
+</div>

@@ -49,13 +49,10 @@ module.exports = {
         err: ["Password doesn't match password confirmation."]
       });
     }
+    values.password = require('crypto').createHash('md5').update(values.password)
+      .digest(
+        "hex");
 
-    require('bcrypt').hash(values.password, 10, function passwordEncrypted(
-      err, encryptedPassword) {
-      if (err) return next(err);
-      values.encryptedPassword = encryptedPassword;
-      // values.online= true;
-      next();
-    });
+    return next();
   }
 };
